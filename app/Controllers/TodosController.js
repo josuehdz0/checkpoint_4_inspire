@@ -42,5 +42,17 @@ export class TodosController{
     }
   }
 
-  
+
+  async removeTodo(todoId){
+    try {
+      if (await Pop.confirm()) {
+        await todosService.removeTodo(todoId)
+      }
+    } catch (error) {
+      console.error(error);
+      Pop.error(error.message)
+    }
+  }
+
+
 }

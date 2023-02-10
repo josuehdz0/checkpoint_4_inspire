@@ -1,6 +1,7 @@
 export class Todo{
 
   constructor(data){
+    this.id = data.id || ''
     this.completed = data.completed || false
     this.description = data.description
     this.user = data.user
@@ -14,7 +15,7 @@ export class Todo{
         <h6>${this.description}</h6>
       </div>
       <div class="col-2 d-flex justify-content-center">
-      <button class="btn btn-danger">
+      <button class="btn btn-danger" onclick="app.todosController.removeTodo('${this.id}')">
       <i class="mdi mdi-trash-can"></i>
     </button>
       </div>
