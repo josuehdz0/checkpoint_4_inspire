@@ -54,5 +54,14 @@ export class TodosController{
     }
   }
 
+  async checkTodo(todoId){
+    try {
+      await todosService.checkTodo(todoId)
+    } catch (error) {
+      console.error(error);
+      Pop.error(error.message)
+    }
+  }
+
 
 }

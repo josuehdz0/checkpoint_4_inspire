@@ -3,6 +3,15 @@ import { Todo } from "../Models/Todo.js";
 import { sandboxApi } from "./AxiosService.js"
 
 class TodosService{
+  async checkTodo(todoId) {
+    const todoIndex = appState.todos.findIndex(t => t.id == todoId)
+    const foundTodo = appState.todos[todoIndex]
+    console.log(foundTodo);
+    const res = await sandboxApi.put(`/josue/todos/${todoId}`, {completed: !foundTodo.completed })
+    console.log('toggle todo', res.data);
+    appState.todos.splice(todoIndex, 1, new Todo(res.data))
+    appState.emit('todos')
+  }
   async removeTodo(todoId) {
     const res = await sandboxApi.delete('/josue/todos/'+ todoId)
     console.log('removing todo', res.data);
