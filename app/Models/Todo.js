@@ -21,4 +21,15 @@ export class Todo{
     </div>
     `
   }
+
+// NOTE dont need this!
+  // static todoForm(todo){
+  //   return`
+  //   </div>
+  //       <form class="form-label" onsubmit="app.todosController.createTodo()">
+  //         <div class="my-3">
+  //           <input required type="text" value="" class="form-control" placeholder="new todo" name="${todo.description}">
+  //   </div>
+  //   `
+  // }
 }
