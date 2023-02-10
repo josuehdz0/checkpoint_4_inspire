@@ -1,4 +1,5 @@
 import { appState } from "../AppState.js";
+import { Todo } from "../Models/Todo.js";
 import { todosService } from "../Services/TodosService.js";
 import { getFormData } from "../Utils/FormHandler.js";
 import { Pop } from "../Utils/Pop.js";
@@ -8,6 +9,7 @@ function _drawTodos(){
   let template = ''
   appState.todos.forEach(t => template += t.TodoList)
   setHTML('todos', template)
+  // setHTML('todos', Todo.todoForm({}))
 }
 
 export class TodosController{
@@ -26,17 +28,19 @@ export class TodosController{
     }
   }
 
-  asnyc createTodo(){
+  async createTodo(){
     try {
       window.event?.preventDefault()
       const form = window.event.target
       const formData = getFormData(form)
       console.log(formData);
+      form.reset()
       await todosService.createTodo(formData)
     } catch (error) {
       console.error(error);
       Pop.error(error.message)
     }
-
   }
+
+  
 }
