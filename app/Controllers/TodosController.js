@@ -1,5 +1,6 @@
 import { appState } from "../AppState.js";
 import { todosService } from "../Services/TodosService.js";
+import { getFormData } from "../Utils/FormHandler.js";
 import { Pop } from "../Utils/Pop.js";
 import { setHTML } from "../Utils/Writer.js";
 
@@ -25,7 +26,17 @@ export class TodosController{
     }
   }
 
-  // asnyc createTodo(){
+  asnyc createTodo(){
+    try {
+      window.event?.preventDefault()
+      const form = window.event.target
+      const formData = getFormData(form)
+      console.log(formData);
+      await todosService.createTodo(formData)
+    } catch (error) {
+      console.error(error);
+      Pop.error(error.message)
+    }
 
-  // }
+  }
 }
