@@ -11,6 +11,7 @@ function _drawTodos(){
 
 export class TodosController{
   constructor(){
+    this.getTodos()
     console.log('todo controller?');
     appState.on('todos', _drawTodos)
   }
@@ -23,4 +24,8 @@ export class TodosController{
       Pop.error(error.message)
     }
   }
+
+  // asnyc createTodo(){
+
+  // }
 }
