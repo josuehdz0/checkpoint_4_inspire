@@ -3,13 +3,15 @@ import { Todo } from "../Models/Todo.js";
 import { todosService } from "../Services/TodosService.js";
 import { getFormData } from "../Utils/FormHandler.js";
 import { Pop } from "../Utils/Pop.js";
-import { setHTML } from "../Utils/Writer.js";
+import { setHTML, setText } from "../Utils/Writer.js";
 
 function _drawTodos(){
   let template = ''
   appState.todos.forEach(t => template += t.TodoList)
   setHTML('todos', template)
-  // setHTML('todos', Todo.todoForm({}))
+  
+  let todosRemaining = ((appState.todos.length)-(appState.todos.filter(todo => todo.completed).length))
+  setText('todos-remaining',todosRemaining)
 }
 
 export class TodosController{
