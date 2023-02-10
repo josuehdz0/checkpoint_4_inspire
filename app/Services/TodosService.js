@@ -4,7 +4,7 @@ import { sandboxApi } from "./AxiosService.js"
 
 class TodosService{
   async removeTodo(todoId) {
-    const res = await sandboxApi.delete('/josue/todos/:'+ todoId)
+    const res = await sandboxApi.delete('/josue/todos/'+ todoId)
     console.log('removing todo', res.data);
     appState.todos = appState.todos.filter(todo => todo.id != todoId)
   }
