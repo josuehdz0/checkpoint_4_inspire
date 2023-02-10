@@ -6,5 +6,11 @@ export class Todo{
     this.user = data.user
   }
 
-  
+  get TodoList(){
+    return`
+    <div class="row d-flex">
+                <p> ${this.description} <i class="mdi mdi-trash-can"></i></p>
+              </div>
+    `
+  }
 }
