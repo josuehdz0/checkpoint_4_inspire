@@ -11,9 +11,12 @@ export class Weather{
 
   get temperatureTemplate(){
     return`
-    <h4>${this.fahrenheit} F</h4>
-    <h4>${this.celcius} C</h4>
-
+    <button class="btn btn-light">
+    <h4>${this.fahrenheit}<i class="mdi mdi-temperature-fahrenheit"></i></h4>
+  </button>
     `
+
+    
+    
   }
 }
