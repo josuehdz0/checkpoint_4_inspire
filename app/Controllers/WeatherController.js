@@ -13,6 +13,13 @@ export class WeatherController{
     appState.on('weather', _drawWeather)
   }
 
+  toggleTemperatureUnit(){
+    appState.weather.isFahrenheit = !appState.weather.isFahrenheit;
+    _drawWeather();
+  }
+
+
+
   async getWeather(){
     try {
       await weatherService.getWeather()

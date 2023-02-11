@@ -7,6 +7,7 @@ export class Weather{
     this.fahrenheit = (1.8*(data.main.temp-273.15)+32).toFixed(1)
     this.weather = data.weather
     this.isFahrenheit = true;
+    this.condition = data.weather[0].description
   }
 
 
@@ -29,6 +30,7 @@ export class Weather{
   <button class="btn btn-light"  onclick="app.weatherController.toggleTemperatureUnit()">
     <h4>${temperature}<i class="mdi ${icon}"></i></h4>
   </button>
+  <h4 class="text-center">${this.condition}</h4>
   `
   }
 
