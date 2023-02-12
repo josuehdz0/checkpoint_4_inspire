@@ -1,3 +1,4 @@
+import { Time } from "./Models/Time.js"
 import { Value } from "./Models/Value.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
@@ -15,7 +16,9 @@ class AppState extends EventEmitter {
   /** @type {import('./Models/Weather').Weather | null} */
   weather = null
 
-  isFahrenheit = true;
+ /** @type {import('./Models/Time').Time | null} */
+  time = new Time()
+ 
   
 }
 
