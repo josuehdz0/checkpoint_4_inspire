@@ -10,7 +10,7 @@ function _drawQuote(){
 export class QuoteController{
   
   constructor(){
-    console.log('hello from quote controller');
+    // console.log('hello from quote controller');
     this.getQuote()
     appState.on('quote', _drawQuote)
   }

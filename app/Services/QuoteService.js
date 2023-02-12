@@ -5,7 +5,7 @@ import { sandboxApi } from "./AxiosService.js"
 class QuoteService{
   async getQuote() {
     const res = await sandboxApi.get('quotes')
-    console.log('the quote', res.data);
+    // console.log('the quote', res.data);
     appState.quote = new Quote(res.data)
   }
 
