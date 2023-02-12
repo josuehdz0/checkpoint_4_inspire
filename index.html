@@ -38,9 +38,18 @@
 
   <main>
     <div class="container-fluid">
-      <div class="row">
+      <div class="row justify-content-between m-3">
+        <!-- NOTE this is weather -->
+        <div class="col-2">
+          <div class="row" id="weatherhere">
+            <!-- <button class="btn btn-light">
+              <h4>48<i class="mdi mdi-temperature-fahrenheit"></i></h4>
+            </button> -->
+          </div>
+
+        </div>
         <!-- NOTE This is the todos -->
-        <div class="col-4">
+        <div class="col-3">
           <div class="p-3">
             <div>
               <div class="row">
@@ -79,15 +88,15 @@
             </div>
           </div>
         </div>
-        <!-- NOTE this is weather -->
-        <div class="col-2">
-          <div class="row" id="weatherhere">
-            <!-- <button class="btn btn-light">
-              <h4>48<i class="mdi mdi-temperature-fahrenheit"></i></h4>
-            </button> -->
-          </div>
+      </div>
+      <div class="row justify-content-center">
 
+        <!-- NOTE this is time -->
+        <div class="col-3" id="timehere">
+          <!-- <h1> 11:13 AM </h1> -->
         </div>
+      </div>
+      <div class="row">
         <!-- NOTE this is quote -->
         <div class="col-3">
           <div id="quotehere">
@@ -96,11 +105,12 @@
           </div>
         </div>
 
-        <!-- NOTE this is time -->
-        <div class="col-3" id="timehere">
-          <!-- <h1> 11:13 AM </h1> -->
-        </div>
+
       </div>
+
+
+
+
     </div>
   </main>
 
