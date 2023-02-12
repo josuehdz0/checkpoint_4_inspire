@@ -17,7 +17,7 @@ function _drawTodos(){
 export class TodosController{
   constructor(){
     this.getTodos()
-    console.log('todo controller?');
+    // console.log('todo controller?');
     appState.on('todos', _drawTodos)
   }
 

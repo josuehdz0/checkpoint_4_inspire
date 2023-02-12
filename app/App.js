@@ -1,3 +1,4 @@
+import { QuoteController } from "./Controllers/QuoteController.js";
 import { TimeController } from "./Controllers/TimeController.js";
 import { TodosController } from "./Controllers/TodosController.js";
 import { ValuesController } from "./Controllers/ValuesController.js";
@@ -8,6 +9,7 @@ class App {
   todosController = new TodosController();
   weatherController = new WeatherController();
   timeController = new TimeController();
+  quoteController = new QuoteController();
 }
 
 window["app"] = new App();

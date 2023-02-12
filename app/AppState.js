@@ -18,6 +18,12 @@ class AppState extends EventEmitter {
 
  /** @type {import('./Models/Time').Time | null} */
   time = new Time()
+
+   /** @type {import('./Models/Quote').Quote| null} */
+  quote = null
+
+     /** @type {import('./Models/Image').Image| null} */
+  image = null
  
   
 }

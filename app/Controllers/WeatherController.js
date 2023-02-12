@@ -8,7 +8,7 @@ function _drawWeather(){
 }
 export class WeatherController{
   constructor(){
-    console.log('weather controller!');
+    // console.log('weather controller!');
     this.getWeather()
     appState.on('weather', _drawWeather)
   }

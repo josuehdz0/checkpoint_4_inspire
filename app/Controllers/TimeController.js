@@ -8,7 +8,7 @@ function _drawTime() {
 export class TimeController{
 
   constructor(){
-    console.log('hi from Time Controller');
+    // console.log('hi from Time Controller');
     this.updateTime();
     setInterval(this.updateTime,1000)
     appState.on('time',_drawTime)
