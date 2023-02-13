@@ -23,12 +23,12 @@ export class Weather{
 
   // NOTE this ask if temp is fahrenheit or not, does the same with icon.
   const temperature = this.isFahrenheit ? this.fahrenheit : this.celsius;
-  const icon = this.isFahrenheit ? 'mdi-temperature-fahrenheit' : 'mdi-temperature-celsius';
+  const icon = this.isFahrenheit ? '°F' : '°C';
 
   // NOTE here is were the function dynamically switches between variables above
   return`
   <button class="btn "  onclick="app.weatherController.toggleTemperatureUnit()">
-    <h4>${temperature}<i class="mdi ${icon}"></i></h4>
+    <h4>${temperature} ${icon}</h4>
   </button>
   <h4 class="text-center">${this.condition}</h4>
   `
