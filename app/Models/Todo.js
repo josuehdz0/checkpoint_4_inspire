@@ -10,7 +10,7 @@ export class Todo{
   get TodoList(){
     return`
     <div class="row my-1">
-      <div class="col-2 d-flex justify-content-center"><input ${this.completed ? 'checked' : ''} type="checkbox" onchange="app.todosController.checkTodo('${this.id}')" ></div>
+      <div class="col-1 d-flex justify-content-center"><input ${this.completed ? 'checked' : ''} type="checkbox" onchange="app.todosController.checkTodo('${this.id}')" ></div>
       <div class="col-8 d-flex justify-content align-items-center">
         <h6>${this.description}</h6>
       </div>

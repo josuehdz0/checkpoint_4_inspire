@@ -27,7 +27,7 @@ export class Weather{
 
   // NOTE here is were the function dynamically switches between variables above
   return`
-  <button class="btn btn-light"  onclick="app.weatherController.toggleTemperatureUnit()">
+  <button class="btn "  onclick="app.weatherController.toggleTemperatureUnit()">
     <h4>${temperature}<i class="mdi ${icon}"></i></h4>
   </button>
   <h4 class="text-center">${this.condition}</h4>

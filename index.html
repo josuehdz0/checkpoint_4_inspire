@@ -32,16 +32,13 @@
   <title>checkpoint_4_inspire</title>
 </head>
 
-<body class="debug">
+<body class="debu">
   <header>
-  </header>
-
-  <main>
     <div class="container-fluid">
       <div class="row justify-content-between m-3">
         <!-- NOTE this is weather -->
-        <div class="col-2">
-          <div class="row" id="weatherhere">
+        <div class="col-md-2 my-2">
+          <div class="row customcard" id="weatherhere">
             <!-- <button class="btn btn-light">
               <h4>48<i class="mdi mdi-temperature-fahrenheit"></i></h4>
             </button> -->
@@ -49,8 +46,8 @@
 
         </div>
         <!-- NOTE This is the todos -->
-        <div class="col-3">
-          <div class="p-3">
+        <div class="col-md-2 customcard">
+          <div class="p-1">
             <div>
               <div class="row">
                 <div class="col-6">
@@ -89,24 +86,22 @@
           </div>
         </div>
       </div>
+
+
+    </div>
+  </header>
+
+  <main>
+    <div class="container-fluid">
+
       <div class="row justify-content-center">
 
         <!-- NOTE this is time -->
-        <div class="col-3" id="timehere">
+        <div class="col-md-6" id="timehere">
           <!-- <h1> 11:13 AM </h1> -->
         </div>
       </div>
-      <div class="row">
-        <!-- NOTE this is quote -->
-        <div class="col-3">
-          <div id="quotehere">
-            <h4> Super kewl quote </h4>
-            <div class="text-center on-hover">hi</div>
-          </div>
-        </div>
 
-
-      </div>
 
 
 
@@ -115,6 +110,19 @@
   </main>
 
   <footer>
+    <div class="container-fluid">
+      <div class="row m-3">
+        <!-- NOTE this is quote -->
+        <div class="col-md-6 quotefont p-3">
+          <div id="quotehere">
+            <h4> Super kewl quote </h4>
+            <div class="text-center on-hover">hi</div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
   </footer>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"

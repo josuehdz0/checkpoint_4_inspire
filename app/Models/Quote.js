@@ -9,7 +9,7 @@ export class Quote {
     return`
     
       <h4> ${this.content} </h4>
-      <div class="text-center on-hover">${this.author}</div>
+      <div class="text-center on-hover ">${this.author}</div>
    
     `
   }

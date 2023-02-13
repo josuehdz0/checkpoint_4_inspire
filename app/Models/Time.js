@@ -6,7 +6,7 @@ export class Time{
 
   get timeTemplate(){
     return`
-    <h1>${this.time}</h1>
+    <h1 class="text-center timefont">${this.time}</h1>
     `
   }
 }
